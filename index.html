@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="container header">
+            <h1><span id="algo_name"></span> Visualization</h1>
+        </div>
+        <section class="container data-container">
+
+        </section>
+        <div class="options">
+            <div class="">
+                <button class="reset" onclick="resetGrid()">Reset</button> &nbsp;
+            </div>
+            <div class="">
+                <button class="btnsort" onclick="bubbleSort()">Bubble Sort</button> &nbsp;
+            </div>
+            <div class="">
+                <button class="btnsort" onclick="insertionSort()">Insertion Sort</button> &nbsp;
+            </div>
+            <div class="">
+                <button class="btnsort" onclick="selectionSort()">Selection Sort</button> &nbsp;
+            </div>
+            <div class="">
+                <button class="btnsort" onclick="mergeSort()">Merge Sort</button> &nbsp;
+            </div>
+            <div class="">
+                <button class="btnsort" onclick="quickSort()">Quick Sort</button> &nbsp;
+            </div>
+            <div class="">
+                <button class="btnsort" onclick="heapSort()">Heap Sort</button> &nbsp;
+            </div>
+            <div class="">
+                <span class="min-ms">10 ms</span>
+                <input type="range" min="10" max="500" value="100" class="slider" title="Algo Speed" id="myRange">
+                <span class="max-ms">500 ms</span>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-medium';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+body {
+    font-family: 'Roboto-regular';
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 1px 7px -2px dimgrey;
+    padding: 1rem 0;
+}
+
+.hero {
+    height: 100vh;
+}
+
+.data-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5rem;
+}
+
+.bar {
+    width: 30px;
+    border-radius: 02px;
+    background-color: #353434;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    margin: 0 05px;
+}
+
+.block__id {
+    position: absolute;
+    top: 101px;
+    color: black;
+    text-align: center;
+    font-size: 13px;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 1px 5px -2px;
+    font-family: 'Roboto-regular';
+    letter-spacing: 0.03rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    font-family: 'Roboto-regular';
+    letter-spacing: 0.05rem;
+    color: dimgray;
+    font-size: 1.7rem;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem 7rem;
+}
+
+.max-ms {
+    vertical-align: super;
+    font-size: 10px;
+    position: absolute;
+    top: 25px;
+    right: 115px;
+}
+
+.min-ms {
+    vertical-align: super;
+    font-size: 10px;
+    position: absolute;
+    top: 25px;
+}
