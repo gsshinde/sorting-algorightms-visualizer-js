@@ -51,7 +51,7 @@ async function bubbleSort() {
     btnSort.forEach(btn => {
         btn.disabled = true;
     });
-    algoName.innerHTML = 'Running --> Bubble Sort';
+    algoName.innerHTML = 'Running - Bubble Sort';
     let blocks = document.querySelectorAll('.bar');
     for (let i = 0; i < blocks.length - 1; i++) {
         for (let j = 0; j < blocks.length - i - 1; j++) {
@@ -81,7 +81,7 @@ async function bubbleSort() {
     btnSort.forEach(btn => {
         btn.disabled = false;
     });
-    algoName.innerHTML = 'Completed --> Bubble Sort';
+    algoName.innerHTML = 'Completed - Bubble Sort';
 }
 
 async function selectionSort() {
@@ -89,7 +89,7 @@ async function selectionSort() {
     btnSort.forEach(btn => {
         btn.disabled = true;
     });
-    algoName.innerHTML = 'Running --> Selection Sort';
+    algoName.innerHTML = 'Running - Selection Sort';
     let blocks = document.querySelectorAll('.bar');
     let i, j, min_index;
 
@@ -120,7 +120,7 @@ async function selectionSort() {
     btnSort.forEach(btn => {
         btn.disabled = false;
     });
-    algoName.innerHTML = 'Completed --> Selection Sort';
+    algoName.innerHTML = 'Completed - Selection Sort';
 }
 
 async function insertionSort() {
@@ -128,7 +128,7 @@ async function insertionSort() {
     btnSort.forEach(btn => {
         btn.disabled = true;
     });
-    algoName.innerHTML = 'Running --> Insertion Sort';
+    algoName.innerHTML = 'Running - Insertion Sort';
     let blocks = document.querySelectorAll('.bar');
 
     for (let i = 1; i < blocks.length; i++) {
@@ -158,7 +158,7 @@ async function insertionSort() {
     btnSort.forEach(btn => {
         btn.disabled = false;
     });
-    algoName.innerHTML = 'Completed --> Insertion Sort';
+    algoName.innerHTML = 'Completed - Insertion Sort';
 }
 
 async function mergeSort() {
@@ -166,7 +166,7 @@ async function mergeSort() {
     btnSort.forEach(btn => {
         btn.disabled = true;
     });
-    algoName.innerHTML = 'Running --> Merge Sort';
+    algoName.innerHTML = 'Running - Merge Sort';
 
     let blocks1 = document.querySelectorAll('.bar');
     blocks = blocks1;
@@ -176,7 +176,7 @@ async function mergeSort() {
     btnSort.forEach(btn => {
         btn.disabled = false;
     });
-    algoName.innerHTML = 'Completed --> Merge Sort';
+    algoName.innerHTML = 'Completed - Merge Sort';
 }
 
 async function mergePartition(start, end) {
@@ -227,7 +227,7 @@ async function quickSort() {
     btnSort.forEach(btn => {
         btn.disabled = true;
     });
-    algoName.innerHTML = 'Running --> Quick Sort';
+    algoName.innerHTML = 'Running - Quick Sort';
 
     let blocks1 = document.querySelectorAll('.bar');
     blocks = blocks1;
@@ -237,7 +237,7 @@ async function quickSort() {
     btnSort.forEach(btn => {
         btn.disabled = false;
     });
-    algoName.innerHTML = 'Completed --> Quick Sort';
+    algoName.innerHTML = 'Completed - Quick Sort';
 }
 
 async function mainQuickSort(start, end) {
@@ -291,6 +291,11 @@ async function quickPartition(start, end) {
 }
 
 async function heapSort() {
+    btnReset.disabled = true;
+    btnSort.forEach(btn => {
+        btn.disabled = true;
+    });
+    algoName.innerHTML = 'Running - Heap Sort';
     blocks = document.querySelectorAll('.bar');
 
     for (let i = Math.floor(blocks.length / 2) - 1; i >= 0; i--) {
@@ -312,6 +317,12 @@ async function heapSort() {
         blocks[0].style.height = `${ sw * 4 }px`;
         await MaxHeapify(j, 0);
     }
+    blocks[0].style.backgroundColor = "#13CE66";
+    btnReset.disabled = false;
+    btnSort.forEach(btn => {
+        btn.disabled = false;
+    });
+    algoName.innerHTML = 'Completed - Heap Sort';
 }
 
 async function MaxHeapify(n, i) {
